@@ -17,3 +17,11 @@ body{font-family:"Roboto",sans-serif;background:var(--bg);color:var(--text);marg
 .content h2{margin-top:0}
 .mermaid{background:#f5f7fb;padding:12px;border-radius:8px}
 .footer{font-size:13px;color:var(--muted);padding:18px 0}
+
+.content-section{margin:20px 0;padding:18px;background:#fff;border-radius:10px;box-shadow:0 6px 18px rgba(16,24,40,0.04)}
+.card-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin-top:12px}
+.card{background:#fdfdfd;padding:14px;border-radius:10px;border:1px solid #eef3ff;box-shadow:0 6px 16px rgba(11,111,242,0.03)}
+.card h3{margin-top:0;color:#0b6ff2}
+.card p{color:#556}
+.btn{display:inline-block;margin-top:10px;padding:8px 12px;background:#0B6FF2;color:#fff;border-radius:8px;text-decoration:none}
+.btn:hover{opacity:0.95}
