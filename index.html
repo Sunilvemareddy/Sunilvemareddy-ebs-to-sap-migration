@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Oracle EBS → SAP Migration Master Plan</title>
+
+  <!-- Google fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles.css">
+
+  <meta name="theme-color" content="#0B6FF2" />
+</head>
+<body>
+  <header class="hero">
+    <div class="wrap">
+      <h1>Oracle EBS → SAP Migration Master Plan</h1>
+      <p class="lead">Comprehensive, module-agnostic migration playbook — prepared by Sunil</p>
+    </div>
+  </header>
+
+  <nav class="toc wrap">
+    <a href="#exec">Executive</a>
+    <a href="#method">Methodology</a>
+    <a href="#data">Data Strategy</a>
+    <a href="#integration">Integration</a>
+    <a href="#testing">Testing</a>
+    <a href="#cutover">Cutover</a>
+    <a href="#diagrams">Diagrams</a>
+    <a href="#deliverables">Deliverables</a>
+  </nav>
+
+  <main class="wrap content">
+    <section id="exec">
+      <h2>Executive Summary</h2>
+      <p>This master plan outlines the end-to-end approach to migrate an acquired Oracle EBS footprint into the corporate SAP environment. It covers program governance, data strategy, integration, testing, cutover, and post-go-live stabilisation.</p>
+    </section>
+
+    <section id="method">
+      <h2>Migration Methodology (Phases)</h2>
+      <ul>
+        <li><strong>Prepare & Plan</strong> — Charter, scope, steering committee</li>
+        <li><strong>Discover & Assess</strong> — inventory, customisation catalogue</li>
+        <li><strong>Design</strong> — fit-gap, data mapping, interface design</li>
+        <li><strong>Build</strong> — SAP config, ETL, interfaces</li>
+        <li><strong>Test</strong> — multiple trial loads, UAT</li>
+        <li><strong>Cutover</strong> — delta capture, final load, go-live</li>
+        <li><strong>Stabilise</strong> — hypercare & PIR</li>
+      </ul>
+    </section>
+
+    <section id="data">
+      <h2>Data Assessment & Mapping</h2>
+      <p>Key activities: data inventory & profiling, cleansing, field-level mapping, ETL staging design, validation & reconciliation. Maintain data owner sign-offs for major master datasets.</p>
+    </section>
+
+    <section id="integration">
+      <h2>Integration & Technical Architecture</h2>
+      <p>Design integration layer (middleware or file-based), secure APIs, RBAC migration, and sizing for load performance. Keep a full interface inventory.</p>
+    </section>
+
+    <section id="testing">
+      <h2>Testing & Validation</h2>
+      <p>Perform unit, integration, E2E, performance, and reconciliation testing. Conduct multiple data migration mock runs and capture lessons per trial.</p>
+    </section>
+
+    <section id="cutover">
+      <h2>Cutover & Go-Live</h2>
+      <p>Cutover runbook, freeze window, final extracts & delta loads, validation checkpoints, rollback criteria, communications plan, and hypercare teams.</p>
+    </section>
+
+    <section id="diagrams">
+      <h2>Diagrams</h2>
+
+      <h3>High-level Data Migration Flow</h3>
+      <div class="mermaid">
+flowchart TD
+  A[EBS Extract] --> B[Staging / ETL]
+  B --> C[Transform & Validate]
+  C --> D[SAP Staging]
+  D --> E[SAP Load]
+  E --> F[Reconciliation & Signoff]
+  F --> G[Go-Live Acceptance]
+      </div>
+
+      <h3>Process Swimlane — Procure → Pay</h3>
+      <div class="mermaid">
+sequenceDiagram
+  participant BU as Business User
+  participant SR as Source (EBS)
+  participant ET as ETL / Staging
+  participant SAP as SAP Target
+  participant AP as Accounts Payable
+
+  BU->>SR: Create Purchase Requisition (PR)
+  SR->>SR: PR approval (EBS workflow)
+  SR->>ET: Extract approved PRs
+  ET->>SAP: Transform & Load PR/PO into SAP
+  SAP->>BU: PO available in SAP
+  BU->>SAP: Confirm Goods Receipt (GR) in SAP
+  SAP->>AP: Invoice matching & posting
+  AP->>SAP: Payment processing & ledger posting
+      </div>
+
+      <h3>Governance Org Chart</h3>
+      <div class="mermaid">
+graph TB
+  ES[Executive Sponsor] --> SC[Steering Committee]
+  SC --> PM[Program Manager]
+  PM --> DL[Data Migration Lead]
+  PM --> FL[Functional Leads]
+  PM --> TL[Technical Lead]
+  FL --> FMS[Functional SMEs]
+  TL --> DEV[Developers & Integration]
+  DL --> ETL[ETL/Tools Team]
+      </div>
+    </section>
+
+    <section id="deliverables">
+      <h2>Deliverables & Templates</h2>
+      <ul>
+        <li>Project charter, Business case</li>
+        <li>Source assessment report</li>
+        <li>Data mapping workbook (Excel)</li>
+        <li>ETL design & staging schema</li>
+        <li>UAT test scripts & cutover runbook</li>
+        <li>Training materials & hypercare plan</li>
+      </ul>
+    </section>
+
+  </main>
+
+  <footer class="wrap footer">
+    <p>Prepared by Sunil — Oracle EBS technical lead & migration program manager</p>
+  </footer>
+
+  <!-- Mermaid runtime (CDN) -->
+  <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+  <script>
+    mermaid.initialize({ startOnLoad:true, theme: 'default' });
+  </script>
+</body>
+</html>
