@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Project Charter — Oracle EBS → SAP Migration</title>
+  <!-- reuse the main site stylesheet -->
+  <link rel="stylesheet" href="../styles.css">
+  <style>
+    /* page-specific tweaks */
+    .doc-header{
+      background: linear-gradient(90deg,#f7fbff,#fff);
+      border-radius:12px;
+      padding:28px;
+      margin:18px 0;
+      text-align:center;
+      box-shadow:0 6px 18px rgba(16,24,40,0.04);
+    }
+    .doc-header h1{color:#0b6ff2;margin:0;font-size:28px;font-weight:700}
+    .doc-meta{color:#556;margin-top:8px}
+    .doc-body{background:#fff;padding:22px;border-radius:10px;box-shadow:0 8px 24px rgba(12,22,40,0.04);margin-bottom:40px}
+    .back-btn{
+      display:inline-block;
+      margin:10px 0 24px 0;
+      padding:10px 14px;
+      background:#0b6ff2;color:#fff;border-radius:8px;text-decoration:none;
+      box-shadow:0 6px 18px rgba(11,111,242,0.08);
+    }
+    .small-muted{color:#68707a;font-size:0.95rem}
+    /* make content readable */
+    .doc-body h2{color:#0f1724;margin-top:0}
+    .doc-body pre, .doc-body code{background:#f5f7fb;padding:8px;border-radius:6px;overflow:auto}
+    .container{max-width:1000px;margin:0 auto;padding:22px}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- back to site root (relative) -->
+    <a class="back-btn" href="../index.html">&larr; Back to Migration Master Plan</a>
+
+    <header class="doc-header" role="banner">
+      <h1>Project Charter — Oracle EBS → SAP Migration</h1>
+      <div class="doc-meta small-muted">Prepared by: Sunil — Program Manager &nbsp;|&nbsp; Version: 0.1 (Draft)</div>
+    </header>
+
+    <article class="doc-body" role="main">
+      <!-- content = converted markdown (you can tweak wording here) -->
+      <h2>1. Executive summary</h2>
+      <p>Migrate acquired company's Oracle EBS footprint into the corporate SAP environment to standardize operations, reduce maintenance overhead, and consolidate financial and operational reporting.</p>
+
+      <h2>2. Objectives</h2>
+      <ul>
+        <li>Consolidate systems into corporate SAP.</li>
+        <li>Preserve master & transactional integrity.</li>
+        <li>Rationalize customizations and adopt SAP standard where feasible.</li>
+      </ul>
+
+      <h2>3. Scope (high-level)</h2>
+      <p>Modules in scope: FI/CO, MM, SD, PP, WM, QM, PM, HR (as applicable).<br/>
+      Data scope: Master data, open transactions, defined historical summary.</p>
+
+      <h2>4. Deliverables</h2>
+      <p>Project charter, governance docs, source assessment, data mapping templates, test plans, cutover runbook, hypercare plan.</p>
+
+      <h2>5. Governance & roles</h2>
+      <ul>
+        <li>Executive Sponsor: [Name]</li>
+        <li>Program Manager: Sunil</li>
+        <li>Steering Committee: CIO, CFO, BU Heads</li>
+        <li>Workstream Leads: Data, Functional, Technical, Testing, Change Mgmt</li>
+      </ul>
+
+      <h2>6. High-level timeline</h2>
+      <p>Phased plan: Discover → Design → Build → Test → Cutover → Stabilize.</p>
+
+      <h2>7. Risks & assumptions</h2>
+      <ul>
+        <li><strong>Risk:</strong> High number of EBS customizations. <strong>Mitigation:</strong> thorough discovery and rationalization.</li>
+        <li><strong>Assumption:</strong> Corporate SAP instance available for onboarding.</li>
+      </ul>
+
+      <h2>8. Success criteria</h2>
+      <ul>
+        <li>Business sign-off on data reconciliation</li>
+        <li>Minimal operational downtime during cutover</li>
+        <li>Knowledge transfer complete to in-house team</li>
+      </ul>
+
+      <h2>9. Approvals</h2>
+      <p>Executive Sponsor: ______________________  Date: ______</p>
+      <p>Program Manager: ______________________  Date: ______</p>
+    </article>
+
+    <footer style="text-align:center;margin-bottom:40px;color:#68707a">
+      <small>Project Charter — Oracle EBS → SAP Migration</small>
+    </footer>
+  </div>
+</body>
+</html>

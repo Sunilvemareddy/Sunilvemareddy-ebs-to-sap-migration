@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Data Migration Strategy — Oracle EBS → SAP</title>
+  <link rel="stylesheet" href="../styles.css">
+  <style>
+    .doc-header{background: linear-gradient(90deg,#f7fbff,#fff);border-radius:12px;padding:28px;margin:18px 0;text-align:center;box-shadow:0 6px 18px rgba(16,24,40,0.04);}
+    .doc-header h1{color:#0b6ff2;margin:0;font-size:28px;font-weight:700}
+    .doc-meta{color:#556;margin-top:8px}
+    .doc-body{background:#fff;padding:22px;border-radius:10px;box-shadow:0 8px 24px rgba(12,22,40,0.04);margin-bottom:40px}
+    .back-btn{display:inline-block;margin:10px 0 24px 0;padding:10px 14px;background:#0b6ff2;color:#fff;border-radius:8px;text-decoration:none;box-shadow:0 6px 18px rgba(11,111,242,0.08);}
+    .small-muted{color:#68707a;font-size:0.95rem}
+    .container{max-width:1000px;margin:0 auto;padding:22px}
+    .doc-body h2{color:#0f1724;margin-top:0}
+    .doc-body pre, .doc-body code{background:#f5f7fb;padding:8px;border-radius:6px;overflow:auto}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a class="back-btn" href="../index.html">&larr; Back to Migration Master Plan</a>
+    <header class="doc-header" role="banner">
+      <h1>Data Migration Strategy — Oracle EBS → SAP</h1>
+      <div class="doc-meta small-muted">Mapping, staging, ETL, validation approach</div>
+    </header>
+    <article class="doc-body" role="main">
+
+<h2>Data Migration Strategy (Summary)</h2>
+<p><strong>Objectives:</strong> Accurate transfer of master & transactional data to SAP; transparent reconciliation & audit trail.</p>
+<h3>Data types in scope</h3>
+<ul>
+<li><strong>Master data:</strong> Material, Business Partner, GL, Asset, BOM</li>
+<li><strong>Open transactions:</strong> Open POs, open AR/AP, inventory on-hand, WIP</li>
+<li><strong>Historical data policy:</strong> last X years or summarized balances</li>
+</ul>
+<h3>Key activities</h3>
+<ol>
+<li>Profiling & inventory</li>
+<li>Cleansing & standardization</li>
+<li>Mapping & transformation</li>
+<li>Staging & ETL design</li>
+<li>Trial loads & reconciliation</li>
+<li>Final cutover & validation</li>
+</ol>
+<h3>Tools (examples)</h3>
+<ul>
+<li>SAP Migration Cockpit / LSMW</li>
+<li>SAP BODS / Informatica / Custom ETL</li>
+</ul>
+
+    </article>
+    <footer style="text-align:center;margin-bottom:40px;color:#68707a">
+      <small>Data Migration Strategy — Oracle EBS → SAP — Oracle EBS → SAP Migration</small>
+    </footer>
+  </div>
+</body>
+</html>
