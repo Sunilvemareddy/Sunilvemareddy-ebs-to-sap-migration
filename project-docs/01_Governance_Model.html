@@ -1,60 +1,17 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width,initial-scale=1"/>
-  <title>Governance Model — Oracle EBS → SAP Migration</title>
-  <link rel="stylesheet" href="../styles.css">
-  <style>
-    .doc-header{background: linear-gradient(90deg,#f7fbff,#fff);border-radius:12px;padding:28px;margin:18px 0;text-align:center;box-shadow:0 6px 18px rgba(16,24,40,0.04);}
-    .doc-header h1{color:#0b6ff2;margin:0;font-size:28px;font-weight:700}
-    .doc-meta{color:#556;margin-top:8px}
-    .doc-body{background:#fff;padding:22px;border-radius:10px;box-shadow:0 8px 24px rgba(12,22,40,0.04);margin-bottom:40px}
-    .back-btn{display:inline-block;margin:10px 0 24px 0;padding:10px 14px;background:#0b6ff2;color:#fff;border-radius:8px;text-decoration:none;box-shadow:0 6px 18px rgba(11,111,242,0.08);}
-    .small-muted{color:#68707a;font-size:0.95rem}
-    .container{max-width:1000px;margin:0 auto;padding:22px}
-    .doc-body h2{color:#0f1724;margin-top:0}
-    .doc-body pre, .doc-body code{background:#f5f7fb;padding:8px;border-radius:6px;overflow:auto}
-  </style>
-</head>
-<body>
-  <div class="container">
-    <a class="back-btn" href="../index.html">&larr; Back to Migration Master Plan</a>
-    <header class="doc-header" role="banner">
-      <h1>Governance Model — Oracle EBS → SAP Migration</h1>
-      <div class="doc-meta small-muted">Decision hierarchy, cadence, escalation matrix</div>
-    </header>
-    <article class="doc-body" role="main">
-
-<h2>Governance Model</h2>
-<p>This document defines governance bodies, roles, and escalation paths for the migration program.</p>
-<h3>Governance Bodies</h3>
-<ul>
-<li><strong>Executive Sponsor</strong></li>
-<li><strong>Steering Committee</strong> — monthly; approves scope, budget, escalations</li>
-<li><strong>Program Management Office (PMO)</strong> — runbooks, schedule, reporting</li>
-<li><strong>Workstream Leads</strong> — Data, Functional, Technical, Testing, Change</li>
-</ul>
-<h3>Decision authority</h3>
-<p>Sponsor → Steering → Program Manager → Workstream Leads → SMEs</p>
-<h3>Meeting cadences</h3>
-<ul>
-<li>Steering Committee: Monthly</li>
-<li>Program status: Weekly (PMO)</li>
-<li>Workstream standups: Daily or tri-weekly (as required)</li>
-</ul>
-<h3>Escalation matrix</h3>
-<table>
-<tr><th>Level</th><th>Role</th><th>SLA</th></tr>
-<tr><td>1</td><td>Workstream Lead</td><td>24 hrs</td></tr>
-<tr><td>2</td><td>Program Manager</td><td>48 hrs</td></tr>
-<tr><td>3</td><td>Steering Committee</td><td>72 hrs</td></tr>
-</table>
-
-    </article>
-    <footer style="text-align:center;margin-bottom:40px;color:#68707a">
-      <small>Governance Model — Oracle EBS → SAP Migration — Oracle EBS → SAP Migration</small>
-    </footer>
-  </div>
-</body>
-</html>
+<!doctype html><html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><title>01 Governance Model</title><link rel="stylesheet" href="../styles.css"></head><body><div class="container"><a id="backBtn" class="back-btn" href="../index.html">&larr; Back to Migration Master Plan</a><header class="doc-header"><h1>01 Governance Model</h1></header><article class="doc-body"><p>Content pending.</p></article></div>
+<script>
+(function() {
+  var backBtn = document.getElementById('backBtn');
+  if (!backBtn) return;
+  var params = new URLSearchParams(window.location.search);
+  var backAnchor = params.get('back');
+  if (backAnchor) {
+    backBtn.href = '../index.html#' + encodeURIComponent(backAnchor);
+  } else if (document.referrer && document.referrer.indexOf(location.hostname) !== -1) {
+    backBtn.href = document.referrer;
+  } else {
+    backBtn.href = '../index.html';
+  }
+})();
+</script>
+</body></html>
