@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Cutover Runbook — Phase 3</title>
+  <link rel="stylesheet" href="../styles.css">
+  <style>
+    .doc-header{background: linear-gradient(90deg,#f7fbff,#fff);border-radius:12px;padding:28px;margin:18px 0;text-align:center;box-shadow:0 6px 18px rgba(16,24,40,0.04);}
+    .doc-header h1{color:#0b6ff2;margin:0;font-size:28px;font-weight:700}
+    .doc-meta{color:#556;margin-top:8px}
+    .doc-body{background:#fff;padding:22px;border-radius:10px;box-shadow:0 8px 24px rgba(12,22,40,0.04);margin-bottom:40px}
+    .back-btn{display:inline-block;margin:10px 0 24px 0;padding:10px 14px;background:#0b6ff2;color:#fff;border-radius:8px;text-decoration:none;box-shadow:0 6px 18px rgba(11,111,242,0.08);}
+    .container{max-width:1000px;margin:0 auto;padding:22px}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a id="backBtn" class="back-btn" href="../index.html">&larr; Back to Migration Master Plan</a>
+    <header class="doc-header" role="banner">
+      <h1>Cutover Runbook — Phase 3</h1>
+      <div class="doc-meta small-muted">Cutover sequence and validation</div>
+    </header>
+    <article class="doc-body" role="main">
+<h2>Cutover Runbook</h2><p>Step-by-step runbook for cutover day including freeze, final extracts, loads, validation, and switch-over.</p>
+<ol><li>Announce freeze window</li><li>Final EBS extract</li><li>Load masters into SAP</li><li>Load open transactions</li><li>Reconcile & sign-off</li><li>Open SAP to users</li></ol>
+    </article>
+    <footer style="text-align:center;margin-bottom:40px;color:#68707a">
+      <small>Cutover Runbook — Phase 3 — Oracle EBS → SAP Migration</small>
+    </footer>
+  </div>
+
+<script>
+(function() {var backBtn=document.getElementById('backBtn'); if(!backBtn) return; var params=new URLSearchParams(window.location.search); var backAnchor=params.get('back'); if(backAnchor){ backBtn.href='../index.html#'+encodeURIComponent(backAnchor);} else if(document.referrer && document.referrer.indexOf(location.hostname)!==-1){ backBtn.href=document.referrer;} else { backBtn.href='../index.html';}})();
+</script>
+
+</body>
+</html>
